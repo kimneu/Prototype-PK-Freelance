@@ -1,4 +1,9 @@
 // @import "compass";
+$blue-prime: #5fbeec;
+$blue-second: #0087b3;
+$white: #fff;
+$yellow-prime: #fcf298;
+$yellow-second: #efe422;
 
 html {}
 
@@ -6,68 +11,100 @@ body {
   margin: 0;
   font-family: "aller";
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87 */
-  background: #fcf298;
+  background: $yellow-prime;
   /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #fcf298 25%, #efe422 87%);
+  background: -moz-linear-gradient(-45deg, $yellow-prime 25%, $yellow-second 87%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #fcf298 25%,#efe422 87%);
+  background: -webkit-linear-gradient(-45deg, $yellow-prime 25%,$yellow-second 87%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #fcf298 25%,#efe422 87%);
+  background: linear-gradient(135deg, $yellow-prime 25%,$yellow-second 87%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+// Für Dots evtl..
+// https://codepen.io/edmundojr/pen/xOYJGw
 
 header {
   overflow: hidden;
-  background-color: #fff;
+  background-color: $white;
   position: fixed;
   left: 0;
   top: 0;
+  height: 8em;
   width: 100%;
   -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,0.75);
   -moz-box-shadow: 0 1px 20px 0 rgba(0,0,0,0.75);
   box-shadow: 0 1px 20px 0 rgba(0,0,0,0.75);
 }
 
+img {
+  max-width: 100%;
+}
+
 #logo {
-  padding: 1em;
+  padding: 1em 1em 0.5em;
   font-size: 2em;
   float: left;
-  color: #0087b3;
+  color: $blue-second;
   text-decoration: none;
 }
 
 #logo-line {
-  color: #5fbeec;
+  color: $blue-prime;
+}
+@media screen and (max-width: 1000px) {
+  #logo {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  #logo {
+    font-size: 1em;
+  }
 }
 
 .topnav {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 .topnav a {
-  color: #0087b3;
+  color: $blue-second;
   font-size: 1.5em;
-  padding: 1em 0;
-  margin: 0 2em;
-  display: inline-block;
+  padding: 0.75em 0;
+  margin: 0 1em;
+  display: inline;
   text-decoration: none;
   border-bottom: 3px solid transparent;
 }
 
 .topnav a:hover {
-  color: #5fbeec;
+  color: $blue-prime;
   border-bottom: 3px solid transparent;
 }
 
+.topnav a:active {
+  color: $blue-prime;
+  border-bottom: 3px solid $blue-prime;
+}
+// Nur für Demozwecke
+
 #active {
-  color: #5fbeec;
-  border-bottom: 3px solid #5fbeec;
+  color: $blue-prime;
+  border-bottom: 3px solid $blue-prime;
 }
 
 .topnav .icon {
   display: none;
+  float: none;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  border-bottom: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  header {
+    height: auto;
+  }
+
   .topnav a {
     display: none;
   }
@@ -76,8 +113,7 @@ header {
     float: right;
     display: block;
   }
-}
-@media screen and (max-width: 600px) {
+
   .topnav.responsive {
     position: relative;
   }
@@ -96,12 +132,26 @@ header {
 }
 
 .main {
-  background-color: #fff;
-  width: 50%;
+  background-color: $white;
+  width: 40%;
   margin-top: 10em;
-  padding: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em 5em;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 60%;
+    padding: 2em 3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    width: 60%;
+    padding: 1em 2em;
+  }
 }
 
 p strong {
-  color: #5fbeec;
+  color: $blue-prime;
 }
