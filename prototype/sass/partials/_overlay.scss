@@ -1,0 +1,55 @@
+// add blur if overlay is open
+.overlay-open{
+    overflow: hidden;
+    main, header, footer, div:not(.overlay){
+        filter: blur(10px);
+        transition: $transition;
+    }
+}
+// clickable backdrop to be able to close the overlay with click outside.
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+// overlay display
+.overlay{
+    display: none;
+    background: $container-background-color;
+    position: fixed;
+    width: 70%;
+    max-height: 70%;
+    overflow: auto;
+    border: $overlay-border;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    @media screen and (max-width: $breakpoint-s-to-xs){
+        width: 90%;
+        max-height: 90%;
+    }
+
+    &.open{
+        display: block;
+    }
+
+    .close{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-family: $sans-serif;
+        font-size: 1.5em;
+        text-decoration: none;
+        z-index: 100;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

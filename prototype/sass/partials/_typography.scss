@@ -1,0 +1,231 @@
+// set type
+
+html, body{
+    font:{
+        family: $main-font;
+        size: $main-font-size;
+        weight: $main-font-weight;
+    }
+    line-height: $main-line-height;
+    color: $main-font-color;
+
+    @media screen and (max-width: $font-break){
+      font-size: $main-font-size - 2;
+    }
+}
+
+p{
+    text-align: $paragraph-text-align;
+
+    @if $hyphenate-paragraphs {
+        hyphens: auto;
+    }
+
+    & + p{
+        margin-top: $paragraph-gap;
+    }
+    & strong {
+        color: $blue-second;
+    }
+}
+
+$headings: h1, h2, h3, h4, h5, h6;
+.numbered{
+    counter-reset: h1;
+
+    @each $h in $headings {
+        $i: index($headings, $h);
+        $cont: ();
+
+        @for $i from 1 through $i {
+            $cont: append($cont,counter(h#{$i}) ".");
+        }
+
+        $cont: append($cont, "\00a0");
+
+        #{$h}{
+            counter-reset: h#{$i+1};
+
+            &.nocount:before{
+                content: "";
+                counter-increment: none
+            }
+            &:before{
+                counter-increment: $h;
+                content: $cont;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 6{
+    h#{$i}{
+        font: {
+            family: $headings-font;
+            weight: $headings-font-weight;
+            style: $headings-font-style;
+        }
+        text-transform: $headings-text-transform;
+        text-align: $headings-text-align;
+
+        @if $hyphenate-headings {
+                hyphens: auto;
+        }
+    }
+}
+
+h1{
+    font-size: 3em;
+    line-height: 1.05;
+    color: $blue-second;
+    margin: 2.5rem 0;
+
+    @media screen and (max-width: $font-break){
+      font-size: 2.5em;
+    }
+}
+
+h2{
+    font-size: 2.25em;
+    line-height: 1.25;
+    margin: 1.25rem 0;
+
+    @media screen and (max-width: $font-break){
+      font-size: 2em;
+    }
+}
+
+h3{
+    font-size: 1.75em;
+    line-height: 1.25;
+    margin: 1.25rem 0;
+
+    @media screen and (max-width: $font-break){
+      font-size: 1.5em;
+    }
+}
+
+h4{
+    font-size: 1.125em;
+    line-height: 1.22;
+    margin: .5rem 0;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+h5{
+    font-size: 1.1em;
+    margin: .3rem 0;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+h6{
+    font-size: 1em;
+    margin: .25rem 0;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+
+// links
+a,
+.toggle{
+    transition: $transition;
+    color: $link-color;
+    cursor: pointer;
+
+    @if $link-line == false{
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: $link-hover-color;
+        @if $link-hover-line {
+            text-decoration: underline;
+        }
+    }
+
+    &.btn{
+        border-radius: $gutter*2;
+        padding: $gutter/1.5 $gutter*4;
+        border: 2px solid currentColor;
+        margin: auto $gutter;
+        line-height: 3;
+        white-space: nowrap;
+        font-family: $headings-font;
+
+        @media screen and (max-width: 600px){
+            padding: $gutter/1.5 $gutter*2;
+        }
+
+        &:hover{
+            text-decoration: none;
+            background: $link-color;
+            color: black-or-white($link-color);
+            border-color: $link-color;
+        }
+    }
+}
+
+// helper classes for text
+.text{
+    &-black{
+        color: black;
+    }
+    &-white{
+        color: white;
+    }
+    &-center{
+        text-align: center;
+    }
+
+    &-justify{
+        text-align: justify;
+    }
+
+    &-left{
+        text-align: left;
+    }
+
+    &-right{
+        text-align: right;
+    }
+
+    &-hyphen{
+        hyphens: auto;
+    }
+
+    &-no-hyphen{
+        hyphens: none;
+    }
+
+    &-highlighted{
+        background: $text-highlighted-color;
+        color: black-or-white($text-highlighted-color);
+        padding: 3px 0 1px 0;
+    }
+
+    &-small{
+        font-size: .8em;
+    }
+
+    &-muted{
+        opacity: .5;
+    }
+
+    &-lead{
+        font-family: $headings-font;
+        line-height: 1.375;
+        text-align: left;
+        font-size: 1.4em;
+        font-weight: 300;
+        margin-bottom: 1.25rem;
+    }
+}
+
+figcaption{
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    margin-top: .5rem;
+}

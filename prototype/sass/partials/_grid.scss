@@ -1,0 +1,292 @@
+// set default grid
+@if $enable-default-grid{
+    html, body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        @include gridCreator(
+            auto auto auto,
+            12fr,
+            (head, main, foot),
+            "head",
+            "main",
+            "foot"
+        );
+        align-items: center;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat($column-count, 1fr);
+    align-items: center;
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat($column-count, 1fr);
+    }
+    div{
+        @extend .item-span-#{$column-count};
+    }
+    @for $i from 1 through $column-count{
+        .item-span-#{$i}{
+            grid-column-start: auto;
+            grid-column-end: span $i;
+        }
+
+        .item-span-sm-#{$i},
+        .item-span-md-#{$i},
+        .item-span-lg-#{$i}{
+            grid-column-start: auto;
+            grid-column-end: span $column-count;
+        }
+    }
+
+    @for $i from 1 through $column-count{
+        .item-offset-#{$i - 1}{
+            grid-column-start: $i;
+        }
+
+        .item-offset-sm-#{$i},
+        .item-offset-md-#{$i},
+        .item-offset-lg-#{$i}{
+            grid-column-start: auto;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-s-to-xs){
+        @for $i from 1 through $column-count{
+            .item-span-sm-#{$i}{
+                grid-column-start: auto;
+                grid-column-end: span $i;
+            }
+        }
+
+        @for $i from 1 through $column-count{
+            .item-offset-sm-#{$i - 1}{
+                grid-column-start: $i;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-m-to-s){
+        @for $i from 1 through $column-count{
+            .item-span-md-#{$i}{
+                grid-column-start: auto;
+                grid-column-end: span $i;
+            }
+        }
+        @for $i from 1 through $column-count{
+            .item-offset-md-#{$i - 1}{
+                grid-column-start: $i;
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-l-to-m){
+        @for $i from 1 through $column-count{
+            .item-span-lg-#{$i}{
+                grid-column-start: auto;
+                grid-column-end: span $i;
+            }
+        }
+        @for $i from 1 through $column-count{
+            .item-offset-lg-#{$i - 1}{
+                grid-column-start: $i;
+            }
+        }
+    }
+
+    .fullscreen{
+        @extend .item-span-#{$column-count};
+        height: 100vh;
+        background-size: $fullscreen-background-size;
+        background-position: $fullscreen-background-position;
+    }
+    .foot{
+        @extend .item-span-md-#{$section-span};
+        @extend .item-offset-md-#{($column-count - $section-span)/2};
+    }
+    section{
+        padding: $gutter*5 0;
+
+        .boxed &:first-of-type:not(.fullscreen):not(.full-width){
+            padding-top: $gutter * 10;
+        }
+        .boxed &:last-of-type{
+            padding-bottom: $gutter * 10;
+        }
+
+        @extend .item-span-md-#{$section-span};
+        @extend .item-offset-md-#{($column-count - $section-span)/2};
+
+        display: grid;
+        grid-template-columns: repeat(#{$section-span}, 1fr);
+
+        &.full-width,
+        .full-width {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat($column-count, 1fr);
+            @extend .item-span-md-#{$column-count};
+            @extend .item-offset-0;
+            position: relative;
+            margin: 0;
+
+            figure, iframe, video, .video-wrap, .over-video{
+                @extend .item-span-md-#{$column-count};
+                @extend .item-offset-0;
+                padding: 0;
+                line-height: 1;
+                margin: 0;
+            }
+
+            .video-wrap{
+                margin: 0;
+            }
+            .over-video{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $video-overlay-background;
+            }
+
+            figcaption, p, iframe, audio, ul{
+                @extend .item-span-md-#{$section-content-span};
+                @extend .item-offset-md-#{($section-span - $section-content-span)};
+                position: absolute;;
+                bottom: 10px;
+                left: 0;
+            }
+        }
+
+        &.has-sidestory{
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat($column-count, 1fr);
+            @extend .item-span-md-#{$column-count};
+            @extend .item-offset-0;
+            position: relative;
+            .box{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .content{
+                @extend .item-span-md-#{$section-span};
+                @extend .item-offset-md-#{($column-count - $section-span)/2};
+                grid-row-start: 1;
+                display: grid;
+                grid-template-columns: repeat(#{$section-span}, 1fr);
+
+                @media screen and (max-width: $breakpoint-l-to-m){
+                    grid-column-start: auto;
+                    grid-column-end: span 12;
+                    padding: $gutter*2 0;
+                }
+
+            }
+
+            .sidestory{
+                @extend .item-span-md-#{($section-span - $section-content-span)};
+                grid-row-start: 1;
+                align-self: center;
+                padding: $gutter * 2;
+                z-index: 10;
+                margin: 25px;
+                font-size: .8em;
+                background: darken($container-background-color, 5%);
+
+                @media screen and (max-width: $breakpoint-l-to-m){
+                    grid-column-start: auto;
+                    grid-column-end: span 12;
+                    grid-row-start: auto;
+
+                    background: darken($container-background-color, 5%);
+
+                    h1, h2, h3, h4, h5, h6{
+                        text-align: left;
+                    }
+                }
+
+                &-left{
+                    // grid-column-start: 2;
+                    @extend .item-offset-md-#{($column-count - $section-span)/2 - 1};
+                }
+
+                &-right{
+                    @extend .item-offset-md-#{$section-span+1};
+                }
+            }
+        }
+
+        .oversized, pre {
+            @extend .item-span-#{$section-span};
+            display: grid;
+            grid-template-columns: repeat(#{$section-span}, 1fr);
+            padding: 1.25rem 0;
+            position: relative;
+            margin-bottom: 2rem;
+
+            img{
+                @extend .item-span-md-#{$section-span};
+            }
+            code{
+                padding: 0 $gutter;
+            }
+            div, figcaption, p{
+                @extend .item-span-#{$section-content-span};
+                @extend .item-offset-#{($section-span - $section-content-span)/2};
+            }
+        }
+
+        .textoverlay{
+            padding: 0;
+            margin: $gutter * 3 0;
+            background: $textoverlay-background;
+            img{
+                opacity: $textoverlay-image-opacity;
+            }
+            .overlay-content{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: $textotverlay-text-align;
+                width: 100%;
+                color: $textoverlay-color;
+                font-size: $textoverlay-size;
+                line-height: $textoverlay-line-height;
+                font-weight: $textoverlay-font-weight;
+                font-style: $textoverlay-font-style;
+            }
+        }
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, audio, iframe, ul, ol {
+            @extend .item-span-#{$section-content-span};
+            @extend .item-offset-#{($section-span - $section-content-span)/2};
+            width: 100%;
+
+            &.large{
+                @extend .item-span-#{$section-span};
+                @extend .item-offset-0;
+            }
+        }
+
+        blockquote{
+            @extend .item-span-#{$section-quote-span};
+            grid-column-start: 4;
+
+            p{
+                text-align: $blockquote-text-align !important;
+            }
+
+            @media screen and (max-width: $blockquote-break){
+                grid-column-start: 0;
+                grid-column-end: span 6;
+            }
+        }
+    }
+}

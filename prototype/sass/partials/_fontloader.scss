@@ -1,0 +1,88 @@
+// loads all fonts from the font directory
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-black.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-bold.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-extrabold.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-extralight.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-hairline.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-hairline.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-medium.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $sans-serif-font-name;
+    src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-regular.woff2') format('woff2'),
+         url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $serif-font-name;
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $serif-font-name;
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: $serif-font-name;
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
