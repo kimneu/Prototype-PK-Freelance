@@ -49,11 +49,13 @@ pre {
   border-bottom: 3px solid transparent;
 }
 
+// ---------------------------
 .topnav a:active {
   color: $blue-prime;
   border-bottom: 3px solid $blue-prime;
 }
-// Nur für Demozwecke
+// Nur fuer Demozwecke
+// ---------------------------
 
 #active {
   color: $blue-prime;

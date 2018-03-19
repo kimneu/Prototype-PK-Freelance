@@ -1,7 +1,16 @@
 // PROJECT MIXINS
 //---------------------------------------------------------------------
+@mixin background(){
+// Permalink - use to edit and share this gradient:
+// http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87
+background-color: $yellow-prime;
+@include filter-gradient($yellow-prime, $yellow-second, horizontal);
+@include background-image(linear-gradient(left top, $yellow-prime 25%,$yellow-second 87%));}
 
+// Fuer Dots evtl..
+// https://codepen.io/edmundojr/pen/xOYJGw
 
+//---------------------------------------------------------------------
 // TOOLBOX MIXINS
 //---------------------------------------------------------------------
 
@@ -16,8 +25,10 @@
 // use to center elements
 
 
+//---------------------------------------------------------------------
 // with variables
-//---------------
+//---------------------------------------------------------------------
+
 @mixin flexbox($d, $w, $j, $a) {
     display: flex;
     flex-direction: $d;
@@ -26,21 +37,6 @@
     align-items: $a;
 }
 // @include flexbox(direction, wrap, justify, align)
-
-@mixin background(){
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87 */
-    background: $yellow-prime;
-    /* Old browsers */
-    background: -moz-linear-gradient(-45deg, $yellow-prime 25%, $yellow-second 87%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, $yellow-prime 25%,$yellow-second 87%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, $yellow-prime 25%,$yellow-second 87%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  ;
-}
-// Für Dots evtl..
-// https://codepen.io/edmundojr/pen/xOYJGw
 
 
 @mixin gridCreator($rows, $columns, $area-list, $arealayout...){
