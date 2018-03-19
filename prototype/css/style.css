@@ -5,6 +5,60 @@
  * 2. items per row: how many items are in a row max.
  * 3++. to make this responsive add breakpoints, separating with a comma, the mixin automatically reduces by 1.
  */
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller_Rg.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller_lt.ttf") format("ttf");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller_Bd.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller_BdIt.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller-Lt.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/aller/aller-LtIt.ttf") format("ttf");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff2") format("woff2"), url("../fonts/librebaskerville/librebaskerville-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -136,7 +190,7 @@ footer {
   font-style: italic; }
 
 html, body {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.5;
@@ -207,42 +261,42 @@ p {
       content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "." " "; }
 
 h1 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
   text-align: center; }
 
 h2 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
   text-align: center; }
 
 h3 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
   text-align: center; }
 
 h4 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
   text-align: center; }
 
 h5 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
   text-align: center; }
 
 h6 {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
@@ -312,7 +366,7 @@ a,
     margin: auto 10px;
     line-height: 3;
     white-space: nowrap;
-    font-family: "Work Sans", "Calibri", sans-serif; }
+    font-family: "Aller", "Calibri", sans-serif; }
     @media screen and (max-width: 600px) {
       a.btn,
       .toggle.btn {
@@ -364,7 +418,7 @@ a,
   opacity: .5; }
 
 .text-lead {
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   line-height: 1.375;
   text-align: left;
   font-size: 1.4em;
@@ -921,7 +975,7 @@ body {
     position: absolute;
     right: 15px;
     top: 10px;
-    font-family: "Work Sans", "Calibri", sans-serif;
+    font-family: "Aller", "Calibri", sans-serif;
     font-size: 1.5em;
     text-decoration: none;
     z-index: 100; }
@@ -936,7 +990,7 @@ body {
   background: #FDFDFD;
   color: white;
   z-index: 10000;
-  font-family: "Work Sans", "Calibri", sans-serif;
+  font-family: "Aller", "Calibri", sans-serif;
   text-transform: uppercase;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
