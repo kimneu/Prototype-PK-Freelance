@@ -4,24 +4,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pensionskasse Freelance</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Pensionskasse Freelance</title>
 </head>
 
 <body class="boxed">
   <header class="head">
-    <a id="logo" href="home.html"><span>Pensionskasse Freelance</span><br><span id="logo-line">Berufliche Vorsorge à la carte</span></a>
-    <div class="topnav" id="myTopnav">
-      <a href="index.html" id="active">Pensionskasse</a>
-      <a href="news.html">Aktuelles</a>
-      <a href="use.html">Nützliches</a>
-      <a href="contact.html">Kontakt</a>
-      <a href="javascript:void(0);" id="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+    <nav class="menu">
+      <div class="bar">
+      <a id="logo" class="" href="index.html">Pensionskasse Freelance<br><span id="logo-line">Berufliche Vorsorge à la carte</span></a>
+      <span class="nav-toggle">
+          <div class="hamburger">toggle menu</div>
+      </span>
+      <ul>
+        <li><span class="nav-toggle"><div class="ex">close</div></span></li>
+        <li><a href="index.html" id="active">Pensionskasse</a></li>
+        <li><a href="news.html">Aktuelles</a></li>
+        <li><a href="use.html">Nützliches</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
 
-  <div class="main grid">
+  <main class="main grid">
     <section class="box">
     <h1>Willkommen bei der Pensionskasse Freelance</h1>
     <p>Die Pensionskasse Freelance der Gewerkschaft Syndicom bietet eine massgeschneiderte 2. Säule an. Sie ist speziell auf Freelancerinnen und Freelancer zugeschnitten, die in den Medien und in der Kommunikation tätig sind. Bei Freelance gibt es keinen
@@ -58,14 +65,15 @@
     <p>
       <strong>Professionelle Betreuung:</strong> Die Pensionskasse Freelance wird professionell geführt und untersteht der staatlichen Auf­sicht. Halbjährlich bekommst du einen Kontoauszug, mit dem du kontrollieren kannst, ob die Arbeit- bzw. Auftrag­geber
       für dich korrekt abrechnen. Ende Jahr zeigt dir der Ver­si­cherungsausweis deinen aktuellen Kontostand.</p>
-      <figure class="content-wide">
-        <img src="img/man.png" alt="Alte Person">
+</section>
+<section class="box">
+      <figure class="oversized">
+        <img src="img/man.gif" alt="Alte Person">
     </figure>
     </section>
-  </div>
+  </main>
 
-
-    <img class="sticky-bottom" src="img/syndicom.jpg" alt="Syndicom Logo">
+  <img class="sticky-bottom" src="img/syndicom.jpg" alt="Syndicom Logo">
 
 <footer class="grid">
     <div class="foot">
@@ -73,17 +81,10 @@
             &copy; Pensionskasse Freelance &middot; 2018 &middot; <span class="impress">Impressum</span> | <span class="privacy">Datenschutz</span> </p>
     </div>
 </footer>
+>
 
-  <script>
-  function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-          x.className += " responsive";
-      } else {
-          x.className = "topnav";
-      }
-  }
-  </script>
 
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
