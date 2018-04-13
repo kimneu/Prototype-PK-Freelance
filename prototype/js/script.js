@@ -1,40 +1,3 @@
-$(document).ready( function(){
-    var navheight = $('nav.menu').outerHeight();
-    var toc = $('.toc');
-    var headings = [];
-    $('h1, h2, h3').each(function(){
-        if($(this).parent().is('.toc') || $(this).hasClass('no-toc')){
-            // these are the headings excluded
-        } else {
-            var h = $(this).text(),
-                id = null;
-
-            if($(this).attr('id')){
-               id = $(this).attr('id');
-            } else{
-                id = h.replace(/ /g,'')
-                $(this).attr('id', id);
-            }
-            var l = '<a href="#'+id+'" class="'+$(this).prop("tagName")+'">'+h+'</a>';
-                headings.push(l);
-        }
-    });
-
-    var list = '<ul class="table-of-contents">';
-    for (var i = 0; i < headings.length; i++){
-        list += '<li>'+headings[i]+'</li>';
-    }
-    list += '</ul>';
-    toc.append(list);
-
-    $(".table-of-contents a").click(function() {
-		var id = $(this).attr('href');
-		$('html, body').animate({
-			scrollTop: $(id).offset().top - navheight - 30
-		}, 1000);
-	});
-});
-
 // Navigation
 $(document).ready(function(){
     $('.dropdown ul').slideUp();
@@ -198,5 +161,11 @@ $(document).scroll(function() {
     $(".scrollbar").css("width", currentTop + '%');
 });
 
+//@prepros-prepend components/toc.js
 //@prepros-prepend components/nav.js
+//@prepros-prepend components/overlay.js
 //@prepros-prepend components/custom.js
+//@prepros-prepend components/slider.js
+//@prepros-prepend components/video.js
+//@prepros-prepend components/backtotop.js
+//@prepros-prepend components/scrollspy.js
