@@ -1,13 +1,12 @@
 // PROJECT MIXINS
 //---------------------------------------------------------------------
-@mixin background(){
-// Permalink - use to edit and share this gradient:
-// http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87
-background-color: $yellow-prime;
-@include filter-gradient($yellow-prime, $yellow-second, horizontal);
-@include background-image(linear-gradient(left top, $yellow-prime 25%,$yellow-second 87%));}
-
-// Fuer Dots evtl..
+@mixin background() {
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87
+  background-color: $yellow-prime;
+  @include filter-gradient($yellow-prime, $yellow-second, horizontal);
+  @include background-image(linear-gradient(left top, $yellow-prime 25%,$yellow-second 87%));
+}//// Fuer Dots evtl..
 // https://codepen.io/edmundojr/pen/xOYJGw
 
 //---------------------------------------------------------------------

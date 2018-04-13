@@ -1,57 +1,38 @@
 // Shortcuts
 //-----------
-
 $noborder: 0 solid transparent !default;
-$transition: .3s all ease !default;
-
-// SETTINGS
+$transition: 0.3s all ease !default; // SETTINGS
 //-------------------
 $size-restraint-for-large-screens: true !default; // enable if you want to add a max-width to content on very large screens.
 $size-restraint-max-width: 1920px !default;
-
 $gutter: 10px !default; // default spacing
-
 $font-directory: '../fonts' !default;
-
 $serif-font-name: 'Libre Baskerville' !default;
 $serif-font-path: 'librebaskerville' !default;
-
-
 $sans-serif-font-name: 'Aller' !default;
-$sans-serif-font-path: 'aller' !default;
-
-// Font Stacks
+$sans-serif-font-path: 'Aller' !default; // Font Stacks
 $serif: $serif-font-name, 'Times New Roman', serif !default;
-$sans-serif: $sans-serif-font-name, 'Calibri', sans-serif !default;
-
-// Text settings
+$sans-serif: $sans-serif-font-name,'Calibri', sans-serif !default; // Text settings
 $main-font: $sans-serif !default;
 $main-font-size: 18px !default;
 $main-line-height: 1.5 !default;
 $main-font-weight: normal !default;
 $main-font-color: black;
 $font-break: 800px;
-
 $headings-font: $sans-serif !default;
 $headings-font-weight: 300;
 $headings-font-style: normal;
 $headings-text-transform: uppercase;
 $headings-text-align: center;
-
-
 $hyphenate-paragraphs: true !default;
 $hyphenate-headings: false !default;
 $paragraph-gap: 2rem !default;
-
 $paragraph-text-align: justify !default;
-
 $text-highlighted-color: $blue-prime !default;
-
 $link-color: $blue-prime !default;
 $link-hover-color: $blue-prime !default;
 $link-line: false !default;
 $link-hover-line: true !default;
-
 $blockquote-font: $serif !default;
 $blockquote-style: italic !default;
 $blockquote-weight: normal !default;
@@ -62,37 +43,28 @@ $blockquote-border-width: 3px !default;
 $blockquote-border-color: currentColor !default;
 $blockquote-text-align: right !default;
 $blockquote-break: 700px;
-
 $background-color: $yellow-prime !default;
 $container-background-color: white !default;
-
 $enable-default-grid: true !default;
 $container-max-width: 900px;
-
 $column-count: 12 !default;
 $section-span: $column-count - 4 !default;
 $section-content-span: $section-span - 2 !default;
 $section-quote-span: $section-content-span - 1 !default;
-
 $breakpoint-s-to-xs: 600px !default;
 $breakpoint-m-to-s: 960px !default;
 $breakpoint-l-to-m: 1260px !default;
-
-$overlay-border: 0px solid $blue-prime !default;
-
-
+$overlay-border: 0 solid $blue-prime !default;
 $fullscreen-background-size: cover !default;
 $fullscreen-background-position: center center !default;
-
 $textoverlay-background: black !default;
-$textoverlay-image-opacity: .5 !default;
+$textoverlay-image-opacity: 0.5 !default;
 $textotverlay-text-align: center !default;
 $textoverlay-color: white !default;
 $textoverlay-size: 3.1em !default;
 $textoverlay-line-height: 1.05em !default;
 $textoverlay-font-weight: normal !default;
 $textoverlay-font-style: italic;
-
 $slider-ratio-width: 16 !default;
 $slider-ratio-height: 9 !default;
 $slider-navigator-size: 35px !default;
@@ -100,30 +72,13 @@ $slider-arrow-color: $white !default;
 $slider-arrow-hover-color: rgba($white, .5) !default;
 $slider-arrow-thickness: 3px !default;
 $slider-arrow-shadow: true !default;
-
-$video-ratio-width: 16 !default;
-$video-ratio-height: 9 !default;
-
-$video-overlay-background: rgba(black, .5) !default;
-
 $menu-bg: $white !default;
-$menu-color: white !default;
-$menu-hover-color: rgba(white, .8) !default;
-$menu-logo-max-width: 30px !default;
+$menu-color: $blue-second !default;
+$menu-hover-color: $blue-prime !default;
+$menu-logo-max-width: 100px !default;
 $nav-toggle-max-width: 40px !default;
 $hamburger-color: $menu-color !default;
 $hambuger-hover-color: $menu-hover-color !default;
-
 $menu-collapse: 700px !default;
-
-$scrollspy-height-titles: 20px !default;
-$scrollspy-height: 5px !default;
-$scrollspy-section-bg: rgba(white, .3) !default;
-$scrollspy-background: $menu-bg !default;
-$scrollspy-progress: $blue-prime !default;
-$scrollspy-title-collapse: 500px !default;
-
-
-// Dimensions
 $dot-size: 2px;
 $dot-space: 22px;

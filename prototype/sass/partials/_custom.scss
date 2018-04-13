@@ -7,36 +7,3 @@ pre {
   bottom: 0;
   width: 20%;
 }
-
-#logo {
-  padding: 1em 1em 0.5em;
-  font-size: 2em;
-  float: left;
-  color: $blue-second;
-  text-decoration: none;
-}
-
-#logo-line {
-  color: $blue-prime;
-}
-@media screen and (max-width: 1000px) {
-  #logo {
-    font-size: 1.5em;
-  }
-}
-@media screen and (max-width: 600px) {
-  #logo {
-    font-size: 1em;
-  }
-}
-
-
-// ---------------------------
-// ---------------------------
-// Nur fuer Demozwecke:
-// ---------------------------
-
-#active {
-  color: $blue-prime;
-  border-bottom: 3px solid $blue-prime;
-}

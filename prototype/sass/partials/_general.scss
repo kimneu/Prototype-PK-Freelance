@@ -1,102 +1,83 @@
 // set global box sizing
-*{
-    box-sizing: border-box;
-}
 
+* {
+  box-sizing: border-box;
+}
 // add some of the defaults back in
-b, strong{
-    font-weight: bold;
+
+b,
+strong {
+  font-weight: bold;
 }
 
-i{
-    font-style: italic;
+i {
+  font-style: italic;
 }
-
-
 // ensure all images are responsive
-img{
-  margin: 0px auto;
-    max-width: 80%;
-    display: block;
-    height: auto;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-header {
-  overflow: hidden;
-  background-color: $white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 8em;
-  width: 100%;
-  -webkit-box-shadow: 0 1px 15px 0 rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 1px 15px 0 rgba(0,0,0,0.75);
-  box-shadow: 0 1px 15px 0 rgba(0,0,0,0.75);
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body{
-    font-family: "aller";
-    height: auto;
-    transition: $transition;
-
-    // if size restraing is active, prevent content from being wider than 1920px;
-    @if $size-restraint-for-large-screens{
-        header,
-        main,
-        footer{
-            width: 100%;
-            max-width: $size-restraint-max-width;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            box-sizing: border-box;
-
-        }
+body {
+  height: auto;
+  transition: $transition;
+  // if size restraing is active, prevent content from being wider than 1920px;
+  @if $size-restraint-for-large-screens {
+    footer,
+    header,
+    main {
+      width: 100%;
+      max-width: $size-restraint-max-width;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      box-sizing: border-box;
     }
+  }
+  // if boxed layout, add a background color to body and another background to box.
+  &.boxed {
+    @include background;
 
-    // if boxed layout, add a background color to body and another background to box.
-    &.boxed{
-        @include background;
-
-        .box {
-            background: $container-background-color;
-        }
+    .box {
+      background: $container-background-color;
     }
+  }
 }
 
-
-.box{
-    margin: $gutter;
-    box-sizing: border-box;
+.box {
+  margin: $gutter;
+  box-sizing: border-box;
 }
 
-section.box{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: $gutter;
+section.box {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: $gutter;
 }
 
-.main{
+.main {
   margin: 10em auto 5em;
 }
 
-figure{
-    padding-bottom: $gutter / 2; // adds some margin before images
-    margin: 1.25rem 0;
+figure {
+  padding-bottom: $gutter / 2; // adds some margin before images
+  margin: 1.25rem 0;
 }
 
-footer{
-    margin-top: $gutter * 3;
-    margin-bottom: $gutter * 2;
-    padding: 5px;
-    font-style: italic;
+footer {
+  margin-top: $gutter * 3;
+  margin-bottom: $gutter * 2;
+  padding: 5px;
+  font-style: italic;
 
-    &.copyright {}
+  &.copyright {}
 
-    &.toolbar {}
-
+  &.toolbar {}
 }
