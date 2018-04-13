@@ -2,14 +2,13 @@
 @import "compass";
 @import "toolbox/mixins";
 @import "toolbox/colors";
-// // settings
-@import "settings"; //
-// // Webfonts
+// settings
+@import "settings";
+// Webfonts
 @import "partials/fontloader";
-//
-// // Resets all default browser Styles
+// Resets all default browser Styles
 @import "partials/reset"; //
-// // All partials
+// All partials
 @import "partials/general";
 @import "partials/typography";
 @import "partials/grid";
