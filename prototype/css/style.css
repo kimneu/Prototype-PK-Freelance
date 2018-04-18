@@ -130,17 +130,10 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   body.boxed {
-    background-color: #fcf298;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFCF298', endColorstr='#FFEFE422');
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0b3AtY29sb3I9IiNmY2YyOTgiLz48c3RvcCBvZmZzZXQ9Ijg3JSIgc3RvcC1jb2xvcj0iI2VmZTQyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(25%, #fcf298), color-stop(87%, #efe422));
-    background-image: -moz-linear-gradient(left top, #fcf298 25%, #efe422 87%);
-    background-image: -webkit-linear-gradient(left top, #fcf298 25%, #efe422 87%);
-    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(25%, #fcf298), color-stop(87%, #efe422));
-    background-image: -o-linear-gradient(left top, #fcf298 25%, #efe422 87%);
-    background-image: linear-gradient(to right bottom, #fcf298 25%, #efe422 87%); }
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87 */
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAAvElEQVQ4jeXTrQ0CQRCG4Zd/TwHXAgkN3Eg0KEio5RSCQA1IGgBLdhwJVWBP0MCZD3OSOXIEQcIkmxWT79kRsx1JfLO6X9X+E+y/6WfABBgCFXADyqZAOKG7z4ANsAQW9b0F1mY2inKdYG2yGusFj53N7NhmwkmEAZjZNOpF4DAK1DVuC1ZvwEdb8NaEuvu1LVgCl6B3d/dTBCLp5cnzfJRSWknaSzpI2qWU5kVRDKKMpHBtPq7f/8t/CD4BPjxdNOqN+qAAAAAASUVORK5CYII=") repeat, -webkit-linear-gradient(315deg, #fcf298 25%, #efe422 87%) no-repeat;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAAvElEQVQ4jeXTrQ0CQRCG4Zd/TwHXAgkN3Eg0KEio5RSCQA1IGgBLdhwJVWBP0MCZD3OSOXIEQcIkmxWT79kRsx1JfLO6X9X+E+y/6WfABBgCFXADyqZAOKG7z4ANsAQW9b0F1mY2inKdYG2yGusFj53N7NhmwkmEAZjZNOpF4DAK1DVuC1ZvwEdb8NaEuvu1LVgCl6B3d/dTBCLp5cnzfJRSWknaSzpI2qWU5kVRDKKMpHBtPq7f/8t/CD4BPjxdNOqN+qAAAAAASUVORK5CYII=") repeat, -o-linear-gradient(315deg, #fcf298 25%, #efe422 87%) no-repeat;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAAvElEQVQ4jeXTrQ0CQRCG4Zd/TwHXAgkN3Eg0KEio5RSCQA1IGgBLdhwJVWBP0MCZD3OSOXIEQcIkmxWT79kRsx1JfLO6X9X+E+y/6WfABBgCFXADyqZAOKG7z4ANsAQW9b0F1mY2inKdYG2yGusFj53N7NhmwkmEAZjZNOpF4DAK1DVuC1ZvwEdb8NaEuvu1LVgCl6B3d/dTBCLp5cnzfJRSWknaSzpI2qWU5kVRDKKMpHBtPq7f/8t/CD4BPjxdNOqN+qAAAAAASUVORK5CYII=") repeat, linear-gradient(135deg, #fcf298 25%, #efe422 87%) no-repeat; }
     body.boxed .box {
       background: white; }
 
@@ -340,7 +333,7 @@ a {
   .toggle.btn,
   a.btn {
     border-radius: 20px;
-    padding: 6.66667px 40px;
+    padding: 6.6666666667px 40px;
     border: 2px solid currentColor;
     margin: auto 10px;
     line-height: 3;
@@ -349,7 +342,7 @@ a {
     @media screen and (max-width: 600px) {
       .toggle.btn,
       a.btn {
-        padding: 6.66667px 20px; } }
+        padding: 6.6666666667px 20px; } }
     .toggle.btn:hover,
     a.btn:hover {
       text-decoration: none;
@@ -1148,7 +1141,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center; }
   .menu .bar {
-    width: 66.66667%;
+    width: 66.6666666667%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1322,10 +1315,18 @@ body {
 pre {
   margin: 2rem 0 !important; }
 
-.sticky-bottom {
+.syndicom {
   position: fixed;
+  right: 20px;
   bottom: 0;
-  width: 20%; }
+  width: 20%;
+  min-width: 150px;
+  max-width: 250px;
+  background: white;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 
 
