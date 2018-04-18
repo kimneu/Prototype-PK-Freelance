@@ -1,18 +1,10 @@
 // PROJECT MIXINS
 //---------------------------------------------------------------------
 @mixin background() {
-  // Permalink - use to edit and share this gradient:
-  // http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  background-color: $yellow-prime;
-  @include filter-gradient($yellow-prime, $yellow-second, horizontal);
-  @include background-image(linear-gradient(left top, $yellow-prime 25%,$yellow-second 87%), inline-image("../img/p-bg.png") repeat,);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAAvElEQVQ4jeXTrQ0CQRCG4Zd/TwHXAgkN3Eg0KEio5RSCQA1IGgBLdhwJVWBP0MCZD3OSOXIEQcIkmxWT79kRsx1JfLO6X9X+E+y/6WfABBgCFXADyqZAOKG7z4ANsAQW9b0F1mY2inKdYG2yGusFj53N7NhmwkmEAZjZNOpF4DAK1DVuC1ZvwEdb8NaEuvu1LVgCl6B3d/dTBCLp5cnzfJRSWknaSzpI2qWU5kVRDKKMpHBtPq7f/8t/CD4BPjxdNOqN+qAAAAAASUVORK5CYII=") repeat, linear-gradient(135deg, #fcf298 25%,#efe422 87%) no-repeat;
 }
-//// Fuer Dots evtl..
+// Fuer Dots evtl..
 // https://codepen.io/edmundojr/pen/xOYJGw
 //---------------------------------------------------------------------
 // TOOLBOX MIXINS
