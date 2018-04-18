@@ -29,32 +29,6 @@ p {
   }
 }
 $headings: h1, h2, h3, h4, h5, h6;
-
-.numbered {
-  counter-reset: h1;
-  @each $h in $headings {
-    $i: index($headings, $h);
-    $cont: ();
-    @for $i from 1 through $i {
-      $cont: append($cont,counter(h#{$i}) ".");
-    }
-    $cont: append($cont, "\00a0");
-
-    #{$h} {
-      counter-reset: h#{$i+1};
-
-      &.nocount:before {
-        content: "";
-        counter-increment: none;
-      }
-
-      &:before {
-        counter-increment: $h;
-        content: $cont;
-      }
-    }
-  }
-}
 @for $i from 1 through 6 {
   h#{$i} {
     font: {

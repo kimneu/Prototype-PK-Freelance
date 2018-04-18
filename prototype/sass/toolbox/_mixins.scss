@@ -1,11 +1,13 @@
 // PROJECT MIXINS
 //---------------------------------------------------------------------
+$points-12: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAACXBIWXMAAA+hAAAPoQFyLW6TAAAAD1BMVEX///////////////////+Rd1MVAAAABXRSTlMAKl5opvlXrSMAAAAlSURBVAjXY2DADoQVQSSji4sAkGJycTEAUswuLgoIQQYhQxx6AX8aAw99CI6nAAAAAElFTkSuQmCC");
+$points-13: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAACXBIWXMAABDvAAAQ7wGvaW9uAAAAD1BMVEX///////////////////+Rd1MVAAAABXRSTlMAHypopm1aZTwAAAAkSURBVAjXY2DACRgVIbSJiwGY6+LiCKKZXFyckPkwebh6rAAAzhID9RXOKBoAAAAASUVORK5CYII=");
+$points-14: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOAgMAAABiJsVCAAAACXBIWXMAABI8AAASPAEFzVJ0AAAADFBMVEX////////////////1pQ5zAAAABHRSTlMACnOmhaPPpAAAABxJREFUCNdjYMAG8icAif0PgMT/DzACzAVLYAIAPrAJGzDj3Y4AAAAASUVORK5CYII=");
+$points-15: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPBAMAAADJ+Ih5AAAACXBIWXMAABOKAAATigHcdMqhAAAAElBMVEX///////////////////////+65XQCAAAABnRSTlMAFWh9nKaGXPhHAAAAKElEQVQI12NgIAowKitCGCKhIQJghmpoqAKYYRoaaoAqAlcD10UQAABWugUSzZ2rLgAAAABJRU5ErkJggg==");
 @mixin background() {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf298+25,efe422+87 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAAvElEQVQ4jeXTrQ0CQRCG4Zd/TwHXAgkN3Eg0KEio5RSCQA1IGgBLdhwJVWBP0MCZD3OSOXIEQcIkmxWT79kRsx1JfLO6X9X+E+y/6WfABBgCFXADyqZAOKG7z4ANsAQW9b0F1mY2inKdYG2yGusFj53N7NhmwkmEAZjZNOpF4DAK1DVuC1ZvwEdb8NaEuvu1LVgCl6B3d/dTBCLp5cnzfJRSWknaSzpI2qWU5kVRDKKMpHBtPq7f/8t/CD4BPjxdNOqN+qAAAAAASUVORK5CYII=") repeat, linear-gradient(135deg, #fcf298 25%,#efe422 87%) no-repeat;
+  background: $points-14 repeat, linear-gradient(135deg, #fcf298 25%,#efe422 87%) no-repeat;
 }
-// Fuer Dots evtl..
-// https://codepen.io/edmundojr/pen/xOYJGw
 //---------------------------------------------------------------------
 // TOOLBOX MIXINS
 //---------------------------------------------------------------------

@@ -16,3 +16,9 @@ pre {
   padding-right: $gutter;
   $padding-bottom: 0;
 }
+
+.trennlinie {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAACXBIWXMAABOHAAAThwHVRKcyAAAAFVBMVEX///9fvuxfvuxfvuxfvuxfvuxfvuzs2J2BAAAABnRSTlMAMECAkKASMdVYAAAAJElEQVQI12NgQAZMIQJAUiwtEUi6pSUDyTAwqQYWYTQWQFENAIupBKMc2wDEAAAAAElFTkSuQmCC") repeat-x;
+  height: 10px;
+  margin: $gutter*5 $gutter*5 0;
+}
