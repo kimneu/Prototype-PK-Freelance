@@ -36,8 +36,8 @@
     .item-span-lg-#{$i},
     .item-span-md-#{$i},
     .item-span-sm-#{$i} {
-      grid-column-start: auto;
-      grid-column-end: span $column-count;
+      grid-column-start: 2;
+      grid-column-end: span $column-count - 2;
     }
   }
   @for $i from 1 through $column-count {
@@ -48,7 +48,7 @@
     .item-offset-lg-#{$i},
     .item-offset-md-#{$i},
     .item-offset-sm-#{$i} {
-      grid-column-start: auto;
+      grid-column-start: 2;
     }
   }
   @media screen and (min-width: $breakpoint-s-to-xs) {
@@ -89,13 +89,6 @@
         grid-column-start: $i;
       }
     }
-  }
-
-  .fullscreen {
-    @extend .item-span-#{$column-count};
-    height: 100vh;
-    background-size: $fullscreen-background-size;
-    background-position: $fullscreen-background-position;
   }
 
   .foot {
@@ -142,10 +135,6 @@
 
       img {
         @extend .item-span-md-#{$section-span};
-      }
-
-      code {
-        padding: 0 $gutter;
       }
 
       div,

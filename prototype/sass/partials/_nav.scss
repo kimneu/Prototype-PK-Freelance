@@ -16,8 +16,8 @@
   }
 
   .bar {
-    width: $section-span / $column-count * 100%;
-    @include flexbox(row, wrap, space-between, center);
+    width: 100%;
+    @include flexbox(row, no-wrap, space-between, center);
   }
 
   .current {
@@ -25,35 +25,13 @@
     border-bottom: 3px solid $blue-prime;
   }
 
-  .dropdown {
-    span {
-      display: inline-block;
-      position: relative;
-      padding-right: 10px;
-
-      &:after {
-        content: '';
-        @include triangle(5px, down, $menu-color);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -5px;
-        transition: 0.3s all ease;
-      }
-
-      &.open {
-        &:after {
-          transform: translateY(-100%) scaleY(-1);
-        }
-      }
-    }
-  }
-
   .nav-toggle {
     cursor: pointer;
     display: none;
     @media screen and (max-width: $menu-collapse) {
       display: block;
+      padding: $gutter*2;
+      margin: 0 $gutter*2;
     }
   }
 
@@ -82,6 +60,8 @@
   }
 
   ul {
+    top: -20px;
+    right: 50px;
     padding: 0 $gutter;
     list-style: none;
     list-style-type: none;
@@ -89,40 +69,30 @@
     background: $menu-bg;
     margin: 0;
     z-index: 10001;
+    @media screen and (min-width: 1200px) {
+      right: 100px;
+    }
     @media screen and (max-width: $menu-collapse) {
       position: fixed;
       top: 0;
       left: 0;
-      width: 300px;
-      height: 100%;
-      transform: translateX(-300px);
+      width: 100%;
+      height: 220px;
+      transform: translateY(-220px);
       transition: 0.3s all ease;
 
       &.active {
-        transform: translateX(0);
+        transform: translateY(0);
+        box-shadow: 0 0 15px rgba(black, .75);
+        padding-left: $gutter*5;
       }
     }
 
     li {
       list-style: none;
       display: inline-block;
-      padding: 0 $gutter;
+      padding: 2px $gutter;
       @media screen and (max-width: $menu-collapse) {
-        display: block;
-      }
-    }
-
-    ul {
-      background: $menu-bg;
-      position: absolute;
-      padding: $gutter/2;
-      width: 100%;
-      margin: 0;
-      @media screen and (max-width: $menu-collapse) {
-        position: relative;
-      }
-
-      li {
         display: block;
       }
     }
@@ -159,7 +129,7 @@
 
     &:after,
     &:before {
-      background: $hamburger-color;
+      background: $hambuger-hover-color;
     }
   }
 }
@@ -167,11 +137,11 @@
 .ex {
   font-size: 0;
   position: relative;
-  right: 0;
+  right: - $gutter * 2;
+  top: - $gutter;
   width: 100%;
   height: 20px;
   display: block;
-  width: 100%;
 
   &:after,
   &:before {

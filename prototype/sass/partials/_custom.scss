@@ -4,11 +4,11 @@ pre {
 
 .syndicom {
   position: fixed;
-  right: 20px;
+  right: $gutter * 2.5;
   bottom: 0;
   width: 20%;
   min-width: 150px;
-  max-width: 250px;
+  max-width: 225px;
   background: white;
   border-radius: $gutter $gutter 0 0;
   padding-top: $gutter/2;
@@ -20,5 +20,5 @@ pre {
 .trennlinie {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAACXBIWXMAABOHAAAThwHVRKcyAAAAFVBMVEX///9fvuxfvuxfvuxfvuxfvuxfvuzs2J2BAAAABnRSTlMAMECAkKASMdVYAAAAJElEQVQI12NgQAZMIQJAUiwtEUi6pSUDyTAwqQYWYTQWQFENAIupBKMc2wDEAAAAAElFTkSuQmCC") repeat-x;
   height: 10px;
-  margin: $gutter*5 $gutter*5 0;
+  margin: $gutter*5 0 0;
 }
