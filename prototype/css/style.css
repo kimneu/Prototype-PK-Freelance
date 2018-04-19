@@ -149,6 +149,9 @@ section.box {
 .main {
   margin: 10em auto 5em; }
 
+@media screen and (max-width: 700px) {
+  .main {
+    margin: 6em auto 2em; } }
 figure {
   padding-bottom: 5px;
   margin: 1.25rem 0; }
@@ -270,7 +273,7 @@ a {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  color: #5fbeec;
+  color: #0087b3;
   cursor: pointer;
   text-decoration: none; }
   .toggle:hover,
@@ -292,9 +295,9 @@ a {
     .toggle.btn:hover,
     a.btn:hover {
       text-decoration: none;
-      background: #5fbeec;
+      background: #0087b3;
       color: white;
-      border-color: #5fbeec; }
+      border-color: #0087b3; }
 
 .text-black {
   color: black; }
@@ -853,12 +856,16 @@ body {
 
 .overlay-open {
   overflow: hidden; }
-  .overlay-open main, .overlay-open header, .overlay-open footer, .overlay-open div:not(.overlay) {
+  .overlay-open div:not(.overlay),
+  .overlay-open footer,
+  .overlay-open header,
+  .overlay-open main {
     -webkit-filter: blur(10px);
     filter: blur(10px);
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
-    transition: 0.3s all ease; }
+    transition: 0.3s all ease;
+    cursor: pointer; }
 
 .backdrop {
   position: fixed;
@@ -890,12 +897,13 @@ body {
     display: block; }
   .overlay .close {
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 10px;
+    top: 5px;
     font-family: "Aller", "Calibri", sans-serif;
     font-size: 1.5em;
     text-decoration: none;
-    z-index: 100; }
+    z-index: 100;
+    padding: 8px 15px; }
     .overlay .close:hover {
       text-decoration: none; }
 
@@ -1122,6 +1130,14 @@ pre {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAACXBIWXMAABOHAAAThwHVRKcyAAAAFVBMVEX///9fvuxfvuxfvuxfvuxfvuxfvuzs2J2BAAAABnRSTlMAMECAkKASMdVYAAAAJElEQVQI12NgQAZMIQJAUiwtEUi6pSUDyTAwqQYWYTQWQFENAIupBKMc2wDEAAAAAElFTkSuQmCC") repeat-x;
   height: 10px;
   margin: 50px 50px 0; }
+
+@media screen and (max-width: 960px) {
+  section {
+    padding: 10px 0; }
+    .boxed section:first-of-type:not(.fullscreen):not(.full-width) {
+      padding-top: 10px; }
+    .boxed section:last-of-type {
+      padding-bottom: 10px; } }
 
 
 
