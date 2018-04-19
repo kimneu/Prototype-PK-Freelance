@@ -154,8 +154,6 @@ figure {
   margin: 1.25rem 0; }
 
 footer {
-  margin-top: 30px;
-  margin-bottom: 20px;
   padding: 5px;
   font-style: italic; }
 
@@ -1115,7 +1113,7 @@ pre {
   min-width: 150px;
   max-width: 250px;
   background: white;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px; }
