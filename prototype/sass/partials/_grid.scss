@@ -105,13 +105,22 @@
 
   section {
     padding: $gutter*5 0;
+    @media screen and (max-width: $breakpoint-m-to-s) {
+      padding: $gutter 0;
+    }
 
     .boxed &:first-of-type:not(.fullscreen):not(.full-width) {
       padding-top: $gutter * 5;
+      @media screen and (max-width: $breakpoint-m-to-s) {
+        padding-top: $gutter*2;
+      }
     }
 
     .boxed &:last-of-type {
       padding-bottom: $gutter * 5;
+      @media screen and (max-width: $breakpoint-m-to-s) {
+        padding-bottom: $gutter*5;
+      }
     }
     @extend .item-span-md-#{$section-span};
     @extend .item-offset-md-#{($column-count - $section-span)/2};
@@ -126,6 +135,10 @@
       padding: 1.25rem 0;
       position: relative;
       margin-bottom: 2rem;
+      @media screen and (max-width: $breakpoint-l-to-m) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
 
       img {
         @extend .item-span-md-#{$section-span};

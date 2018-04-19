@@ -50,7 +50,8 @@ h1 {
   color: $blue-second;
   margin: 2.5rem 0;
   @media screen and (max-width: $font-break) {
-    font-size: 2.5em;
+    font-size: 2em;
+    margin: 2rem 0;
   }
 }
 

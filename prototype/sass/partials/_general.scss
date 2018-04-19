@@ -65,6 +65,11 @@ section.box {
 .main {
   margin: 10em auto 5em;
 }
+@media screen and (max-width: $breakpoint-s-to-xs) {
+  .main {
+    margin: 6em auto 2em;
+  }
+}
 
 figure {
   padding-bottom: $gutter / 2; // adds some margin before images
