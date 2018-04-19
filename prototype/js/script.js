@@ -1,26 +1,11 @@
 // Navigation
-$(document).ready(function() {
-  $('.dropdown ul').slideUp();
-});
-
-$(document).click(function() {
-  $(".dropdown span").next('ul').slideUp();
-  $(".dropdown span").removeClass('open');
-});
-
-$(document).on("click touchend", ".dropdown span, .table-of-contents", function(event) {
-  $(this).next('ul').slideToggle();
-  $(".dropdown span").toggleClass('open');
-  event.stopPropagation();
-});
-
 $('.nav-toggle').click(function() {
   $('.menu ul').toggleClass('active');
 });
 
 // OVERLAY
 // --------------------
-// if toggle is clicked, find the corresponding overlay contaienr and toggle the opening class.
+// if toggle is clicked, find the corresponding overlay container and toggle the opening class.
 $('.toggle').click(function() {
   var ol = $(this).data('toggle-overlay');
   $('#' + ol).toggleClass('open');
