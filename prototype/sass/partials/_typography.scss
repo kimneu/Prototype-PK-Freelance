@@ -107,7 +107,7 @@ a {
   &:hover {
     color: $link-hover-color;
     @if $link-hover-line {
-      // border-bottom: 3px solid $blue-prime;
+      border-bottom: 3px solid $blue-prime;
     }
   }
 
