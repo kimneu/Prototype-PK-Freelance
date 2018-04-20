@@ -1,55 +1,40 @@
 // loads all fonts from the font directory
 @font-face {
   font-family: $sans-serif-font-name;
-  src: local('Aller Italic'), local('Aller-Italic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Italic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Italic.woff") format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: $sans-serif-font-name;
-  src: local('Aller'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}.woff") format('woff');
+  src: local('Aller'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-regular.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-regular.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: $sans-serif-font-name;
-  src: local('Aller Light'), local('Aller-Light'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Light.woff2") format('woff2'), url("Aller-Light.woff") format('woff');
+  src: local('Aller Italic'), local('Aller-Italic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-name}-italic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-name}-italic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: $sans-serif-font-name;
+  src: local('Aller Light'), local('Aller-Light'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light.woff") format('woff');
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: $sans-serif-font-name;
-  src: local('Aller Bold'), local('Aller-Bold'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Bold.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Bold.woff") format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: $sans-serif-font-name;
-  src: local('Aller Light Italic'), local('Aller-LightItalic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-LightItalic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-LightItalic.woff") format('woff');
+  src: local('Aller Light Italic'), local('Aller-LightItalic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light-italic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-light-italic.woff") format('woff');
   font-weight: 300;
   font-style: italic;
 }
-@font-face {
-  font-family: $sans-serif-font-name;
-  src: local('Aller Bold Italic'), local('Aller-BoldItalic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-BoldItalic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-BoldItalic.woff") format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: $serif-font-name;
-  src: url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff2") format('woff2'), url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff") format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: $serif-font-name;
-  src: url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff2") format('woff2'), url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: $serif-font-name;
-  src: url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff2") format('woff2'), url("#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
+// @font-face {
+//   font-family: $sans-serif-font-name;
+//   src: local('Aller Bold'), local('Aller-Bold'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Bold.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-Bold.woff") format('woff');
+//   font-weight: bold;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: $sans-serif-font-name;
+//   src: local('Aller Bold Italic'), local('Aller-BoldItalic'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-BoldItalic.woff2") format('woff2'), url("#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-BoldItalic.woff") format('woff');
+//   font-weight: bold;
+//   font-style: italic;
+// }

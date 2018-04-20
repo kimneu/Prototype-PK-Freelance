@@ -7,7 +7,7 @@
   color: $blue-second;
   z-index: 10000;
   font-family: $headings-font;
-  text-transform: uppercase;
+  text-transform: normal;
   box-shadow: 0 0 15px rgba(black, .75);
   @include flexbox(row, wrap, space-between, center);
 

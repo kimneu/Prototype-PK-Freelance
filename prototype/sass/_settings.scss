@@ -7,20 +7,17 @@ $size-restraint-for-large-screens: true !default; // enable if you want to add a
 $size-restraint-max-width: 1920px !default;
 $gutter: 10px !default; // default spacing
 $font-directory: '../fonts' !default;
-$serif-font-name: 'Libre Baskerville' !default;
-$serif-font-path: 'librebaskerville' !default;
 $sans-serif-font-name: 'Aller' !default;
-$sans-serif-font-path: 'Aller' !default; // Font Stacks
-$serif: $serif-font-name, 'Times New Roman', serif !default;
+$sans-serif-font-path: 'aller' !default; // Font Stacks
 $sans-serif: $sans-serif-font-name,'Calibri', sans-serif !default; // Text settings
 $main-font: $sans-serif !default;
 $main-font-size: 18px !default;
 $main-line-height: 1.5 !default;
 $main-font-weight: normal !default;
-$main-font-color: black;
+$main-font-color: rgb(35,31,32);
 $font-break: 800px;
 $headings-font: $sans-serif !default;
-$headings-font-weight: 300;
+$headings-font-weight: normal;
 $headings-font-style: normal;
 $headings-text-transform: normal;
 $headings-text-align: center;
@@ -33,16 +30,6 @@ $link-color: $blue-second !default;
 $link-hover-color: $blue-prime !default;
 $link-line: false !default;
 $link-hover-line: false !default;
-$blockquote-font: $serif !default;
-$blockquote-style: italic !default;
-$blockquote-weight: normal !default;
-$blockquote-color: $blue-prime !default;
-$blockquote-border-line: true !default;
-$blockquote-border-position: right !default;
-$blockquote-border-width: 3px !default;
-$blockquote-border-color: currentColor !default;
-$blockquote-text-align: right !default;
-$blockquote-break: 700px;
 $background-color: $yellow-prime !default;
 $container-background-color: white !default;
 $enable-default-grid: true !default;

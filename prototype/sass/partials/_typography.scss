@@ -196,3 +196,12 @@ figcaption {
   margin-bottom: 1.25rem;
   margin-top: 0.5rem;
 }
+
+footer{
+  font-weight: 300;
+  font-style: italic;
+  font-size: $main-font-size - 3;
+  @media screen and (max-width: $font-break){
+    font-size: $main-font-size - 5;
+  }
+}
