@@ -65,9 +65,9 @@ section.box {
 .main {
   margin: 10em auto 5em;
 }
-@media screen and (max-width: $breakpoint-s-to-xs) {
+@media screen and (max-width: 500px) {
   .main {
-    margin: 6em auto 2em;
+    margin: 6.5em auto .5em;
   }
 }
 
